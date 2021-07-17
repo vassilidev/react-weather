@@ -1,13 +1,14 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faWind, faTint, faTachometerAlt, faMapPin} from "@fortawesome/free-solid-svg-icons";
+import {Card} from 'react-bootstrap'
 
 const WeatherCard = (props) => {
     const {weather} = props;
 
     return (
-        <div className="card rounded-3">
-            <div className="card-body p-4">
+        <Card className="rounded-3">
+            <Card.Body className="p-4">
 
                 <div className="d-flex">
                     <h6 className="flex-grow-1">
@@ -54,9 +55,8 @@ const WeatherCard = (props) => {
                             alt=""/>
                     </div>
                 </div>
-
-            </div>
-        </div>
+            </Card.Body>
+        </Card>
     );
 };
 
