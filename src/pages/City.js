@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import axios from "axios";
 import WeatherCard from "../components/WeatherCard";
 import LoadingCard from "../components/LoadingCard";
+import Header from "../components/Header";
 
 const City = () => {
     const [weatherData, setWeatherData] = useState("");
@@ -31,17 +32,20 @@ const City = () => {
     }
 
     return (
-        <section className="vh-100 bg-light">
-            <div className="container py-5 h-100">
+        <div>
+            <Header/>
+            <section className="vh-100 bg-light">
+                <div className="container py-5 h-100">
 
-                <div className="row d-flex justify-content-center align-items-center h-100">
-                    <div className="col-md-8 col-lg-6 col-xl-4">
-                        <WeatherCard weather={weatherData}/>
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col-md-8 col-lg-6 col-xl-4">
+                            <WeatherCard weather={weatherData}/>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
     );
 };
 

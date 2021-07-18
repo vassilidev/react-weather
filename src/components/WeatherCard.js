@@ -7,7 +7,7 @@ const WeatherCard = (props) => {
     const {weather} = props;
 
     return (
-        <Card className="rounded-3">
+        <Card className="col-lg-3 rounded-3">
             <Card.Body className="p-4">
 
                 <div className="d-flex">
@@ -19,7 +19,7 @@ const WeatherCard = (props) => {
                         <img
                             src={"https://flagcdn.com/" + weather.sys.country.toLowerCase() + ".svg"}
                             style={{width: '32px'}}
-                            alt=''
+                            alt={weather.sys.country.toLowerCase() + ' flag'}
                         />
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const WeatherCard = (props) => {
                         <img
                             src={"http://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png"}
                             width="100px"
-                            alt=""/>
+                            alt={weather.weather[0].description}/>
                     </div>
                 </div>
             </Card.Body>
